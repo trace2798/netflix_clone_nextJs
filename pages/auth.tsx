@@ -3,7 +3,7 @@ import React, { useState, useCallback } from "react";
 import Input from "../components/Input";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
-import { FcGoogle } from "react-icons/fc"
+import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 
 const Auth = () => {
@@ -29,7 +29,7 @@ const Auth = () => {
         callbackUrl: "/",
       });
 
-      router.push("/");
+      router.push("/profiles");
     } catch (error) {
       console.log(error);
     }
@@ -94,7 +94,10 @@ const Auth = () => {
               {/* <div onClick={() => signIn('google', { callbackUrl: '/profiles' })} className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition">
                 <FcGoogle size={32} />
               </div> */}
-              <div onClick={() => signIn('github', { callbackUrl: '/' })} className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition">
+              <div
+                onClick={() => signIn("github", { callbackUrl: "/profiles" })}
+                className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition"
+              >
                 <FaGithub size={32} />
               </div>
             </div>
