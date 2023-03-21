@@ -1,7 +1,8 @@
 import React from "react";
 import useBillboard from "../hooks/useBillBoard";
-import {BsPlayCircle} from "react-icons/bs"
-import { AiOutlineInfoCircle } from "react-icons/ai"
+import { BsPlayCircle } from "react-icons/bs";
+import { AiOutlineInfoCircle } from "react-icons/ai";
+import PlayButton from "./PlayButton";
 
 const BillBoard = () => {
   const { data } = useBillboard();
@@ -23,8 +24,8 @@ const BillBoard = () => {
           {data?.description}
         </p>
         <div className="flex flex-row items-center mt-3 md:mt-4 gap-3">
-        {/* <BsPlayCircle movieId={data?.id} /> */}
-        <button
+          <PlayButton movieId={data?.id} />
+          <button
             // onClick={handleOpenModal}
             className="
             bg-white
@@ -42,9 +43,9 @@ const BillBoard = () => {
               hover:bg-opacity-20
               transition
             "
-            >
-              <AiOutlineInfoCircle className="w-4 md:w-7 mr-1" />
-              More Info
+          >
+            <AiOutlineInfoCircle className="w-4 md:w-7 mr-1" />
+            More Info
           </button>
         </div>
       </div>
