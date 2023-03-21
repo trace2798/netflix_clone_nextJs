@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-//api route to only load our favourite movies. 
+//api route to only load our favorite movies. 
 import prismadb from "../../lib/prismadb";
 import serverAuth from "../../lib/serverAuth";
 

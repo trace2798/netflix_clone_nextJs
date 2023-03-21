@@ -1,4 +1,4 @@
-//api route to trigger and the remove and to add favourite id to our list.
+//api route to trigger and the remove and to add favorite id to our list.
 import { without } from "lodash";
 import { NextApiRequest, NextApiResponse } from "next";
 import prismadb from "../../lib/prismadb";
