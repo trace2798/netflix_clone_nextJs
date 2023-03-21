@@ -6,6 +6,7 @@ import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
 import useCurrentUser from "../hooks/useCurrentUser"
 import Navbar from "../components/Navbar";
+import BillBoard from "../components/BillBoard";
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
@@ -34,6 +35,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar/>
+      <BillBoard/>
     </>
   );
 }
